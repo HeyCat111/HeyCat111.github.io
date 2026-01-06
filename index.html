@@ -1,0 +1,183 @@
+<head>
+  <meta charset="UTF-8">
+  <title>小明的个人主页</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+      :root{
+          --main:#1e90ff;
+          --main-dark:#0d78e6;
+          --bg:#f5f7fa;
+          --card:#ffffff;
+          --text:#333;
+          --muted:#666;
+          --radius:8px;
+          --max-width:800px;
+      }
+      *{box-sizing:border-box;margin:0;padding:0;}
+      body{
+          font:16px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"PingFang SC","Microsoft YaHei",sans-serif;
+          background:var(--bg);
+          color:var(--text);
+      }
+      .container{
+          max-width:var(--max-width);
+          margin:40px auto;
+          padding:30px;
+          background:var(--card);
+          border-radius:var(--radius);
+          box-shadow:0 4px 18px rgba(0,0,0,.06);
+      }
+      h1{
+          text-align:center;
+          margin-bottom:40px;
+          color:var(--main);
+          font-size:32px;
+          letter-spacing:1px;
+      }
+      h2{
+          margin:30px 0 15px;
+          color:var(--main-dark);
+          font-size:24px;
+          border-left:4px solid var(--main);
+          padding-left:10px;
+      }
+      ul,ol{margin-left:22px;}
+      a{color:var(--main);text-decoration:none;}
+      a:hover{text-decoration:underline;}
+      table{
+          width:100%;
+          border-collapse:collapse;
+          margin-top:10px;
+          border:1px solid #e0e0e0;
+      }
+      th,td{padding:10px 12px;text-align:left;}
+      th{background:#f2f8ff;}
+      tr:nth-child(even){background:#fafcff;}
+      form p{margin-bottom:18px;}
+      label{font-weight:600;display:inline-block;margin-bottom:6px;color:var(--muted);}
+      input[type=text],
+      input[type=email],
+      textarea{
+          width:100%;
+          padding:10px 12px;
+          border:1px solid #ccd1d9;
+          border-radius:var(--radius);
+          font-size:15px;
+          transition:border .2s;
+      }
+      input:focus,textarea:focus{outline:none;border-color:var(--main);box-shadow:0 0 0 2px rgba(30,144,255,.2);}
+      button{
+          background:var(--main);
+          color:#fff;
+          border:none;
+          padding:10px 28px;
+          font-size:16px;
+          border-radius:var(--radius);
+          cursor:pointer;
+          transition:background .2s;
+      }
+      button:hover{background:var(--main-dark);}
+      hr{margin:50px 0 20px;border:none;border-top:1px solid #e0e0e0;}
+      footer{
+          text-align:center;
+          font-size:13px;
+          color:var(--muted);
+          padding-bottom:30px;
+      }
+      @media(max-width:600px){
+          .container{margin:20px;padding:20px;}
+          h1{font-size:26px;}
+          h2{font-size:20px;}
+      }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <h1>欢迎来到小明的个人主页</h1>
+
+  <section id="about">
+    <h2>关于我</h2>
+    <img src="Snipaste_2026-01-05_14-33-22.png" width="200">
+    <p>大家好! 我叫小明，今年20岁，是一名计算机专业的大学生。</p>
+    <p>我喜欢编程、阅读和打篮球。我的座右铭是：<em>“学无止境，每天进步一点点。”</em></p>
+  </section>
+
+  <section id="skills">
+    <h2>我的技能</h2>
+    <ul>
+      <li>HTML 网页制作</li>
+      <li>Python 编程</li>
+      <li>Office 办公软件</li>
+      <li>摄影与修图</li>
+    </ul>
+  </section>
+  <section id="plan">
+    <h2>我的学习计划</h2>
+    <ol>
+      <li>学习 HTML 基础</li>
+      <li>学习 CSS 样式</li>
+      <li>学习 JavaScript 交互</li>
+      <li>完成一个完整的网站项目</li>
+    </ol>
+  </section>
+
+  <section id="links">
+    <h2>我喜欢的网站</h2>
+    以下是我经常访问的网站：
+    <ul>
+      <li><a href="https://www.baidu.com " target="_blank">百度</a> - 搜索引擎</li>
+      <li><a href="https://www.bilibili.com " target="_blank">哔哩哔哩</a> - 学习视频</li>
+      <li><a href="https://github.com " target="_blank">GitHub</a> - 代码托管</li>
+    </ul>
+  </section>
+  <section id="contact">
+    <h2>联系我</h2>
+    <table border="2px">
+      <tr>
+        <th>联系方式</th>
+        <th>内容</th>
+      </tr>
+      <tr>
+        <td>邮箱</td>
+        <td><a href="mailto:xiaoming@example.com">xiaoming@example.com</a></td>
+      </tr>
+      <tr>
+        <td>电话</td>
+        <td><a href="tel:138-0000-0000">138-0000-0000</a></td>
+      </tr>
+      <tr>
+        <td>地址</td>
+        <td>中国北京市</td>
+      </tr>
+    </table>
+  </section>
+  <section id="guestbook">
+    <h2>给我留言</h2>
+    <form action="#" method="post">
+      <p>
+        <label>你的名字:</label><br>
+        <input type="text" name="name" required>
+      </p>
+
+      <p>
+        <label>你的邮箱:</label><br>
+        <input type="email" name="email" required>
+      </p>
+
+      <p>
+        <label>留言内容:</label><br>
+        <textarea name="message" required rows="6" cols="50"></textarea>
+      </p>
+
+      <button type="submit">提交留言</button>
+    </form>
+  </section>
+  <hr>
+  <footer>
+    版权所有 © 2025 小明 | 最后更新: 2025年1月
+  </footer>
+
+</body>
+</html>
